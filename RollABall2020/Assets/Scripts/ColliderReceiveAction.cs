@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class ColliderReceiveAction : MonoBehaviour
 {
-    [SerializeField] private GameObject thisObject = null;
+    [SerializeField] private GameObject m_thisObject = null;
 
     public bool IsTriggerEnter = false;
 
+    public int DeadCount = 0;
+
+    public int DamageCount = 0;
+
     private void Awake()
     {
-        thisObject = this.gameObject;
+        m_thisObject = this.gameObject;
     }
 
     /// <summary>
@@ -20,7 +24,11 @@ public class ColliderReceiveAction : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(TriggerEnter());
+        DamageCount++;
+        if (DamageCount >= DeadCount)
+        {
+            StartCoroutine(TriggerEnter());
+        }
     }
 
     /// <summary>
@@ -31,6 +39,6 @@ public class ColliderReceiveAction : MonoBehaviour
     {
         IsTriggerEnter = true;
         yield return new WaitForEndOfFrame();
-        thisObject.SetActive(false);
+        m_thisObject.SetActive(false);
     }
 }
