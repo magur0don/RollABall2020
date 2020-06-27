@@ -11,6 +11,8 @@ public class SphereStates : MonoBehaviour
 
     public int SphereHp = 0;
 
+    public bool GameOver = false;
+
     private void Awake()
     {
         foreach (var pickUpData in m_objectStates.ObjectStatusList)
@@ -27,6 +29,7 @@ public class SphereStates : MonoBehaviour
     {
         if (SphereHp <= 0)
         {
+            GameOver = true;
             Debug.Log("ゲームオーバー");
         }
     }

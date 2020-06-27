@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 4420560238974880010}
   - component: {fileID: 3648953299646113778}
   - component: {fileID: -1086638158803296428}
+  - component: {fileID: 5049107553801835548}
+  - component: {fileID: -4476577044557832572}
+  - component: {fileID: 4249988920468468756}
   m_Layer: 0
   m_Name: PickUp
   m_TagString: PickUp
@@ -155,3 +158,40 @@ MonoBehaviour:
   m_pickUpData:
     Name: 
     Hp: 0
+--- !u!114 &5049107553801835548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420560238974880001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb691ebf28b1cc45a260efa96c327c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pickUpDisposition: 0
+--- !u!114 &-4476577044557832572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420560238974880001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec21b0afebcca54c95f1f59aaa21556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4249988920468468756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420560238974880001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08347d7a88d12f2499fcb0e3d64ed3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

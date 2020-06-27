@@ -6,6 +6,10 @@ public class Bullet : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<SphereDamage>().AddSphereDamage(1);
+        }
         gameObject.SetActive(false);
     }
 }

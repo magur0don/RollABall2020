@@ -15,7 +15,12 @@ public class SphereDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            m_sphereStates.SphereHp--;
+            AddSphereDamage(1);
         }
+    }
+
+    public void AddSphereDamage(int damage)
+    {
+        m_sphereStates.SphereHp -= damage;
     }
 }
