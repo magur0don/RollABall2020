@@ -21,16 +21,16 @@ public class PickUpDisapperCounter : MonoBehaviour
         m_pickUpDisposition = GetComponent<PickUpDisposition>();
         switch (m_pickUpDisposition.m_pickUpDisposition)
         {
-            case PickUpDisposition.PickUpDisopsition.None:
+            case PickUpDisposition.PublicPickUpDisposition.None:
                 DissapperCount = 1;
                 break;
-            case PickUpDisposition.PickUpDisopsition.SpeedUp:
+            case PickUpDisposition.PublicPickUpDisposition.SpeedUp:
                 DissapperCount = 2;
                 break;
-            case PickUpDisposition.PickUpDisopsition.SpeedDown:
+            case PickUpDisposition.PublicPickUpDisposition.SpeedDown:
                 DissapperCount = 3;
                 break;
-            case PickUpDisposition.PickUpDisopsition.QTE:
+            case PickUpDisposition.PublicPickUpDisposition.QTE:
                 DissapperCount = 10;
                 break;
         }

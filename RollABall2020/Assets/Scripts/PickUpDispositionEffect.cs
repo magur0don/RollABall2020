@@ -25,13 +25,13 @@ public class PickUpDispositionEffect : MonoBehaviour
 
         switch (m_pickUpDisposition.m_pickUpDisposition)
         {
-            case PickUpDisposition.PickUpDisopsition.SpeedUp:
+            case PickUpDisposition.PublicPickUpDisposition.SpeedUp:
                 other.GetComponent<Rigidbody>().AddForce(vec * 5f, ForceMode.Impulse);
                 break;
-            case PickUpDisposition.PickUpDisopsition.SpeedDown:
+            case PickUpDisposition.PublicPickUpDisposition.SpeedDown:
                 other.GetComponent<Rigidbody>().AddForce(vec * -100f, ForceMode.Acceleration);
                 break;
-            case PickUpDisposition.PickUpDisopsition.QTE:
+            case PickUpDisposition.PublicPickUpDisposition.QTE:
                 if (m_QTEPresenter == null)
                 {
                     m_QTEPresenter = GameObject.Find("Canvas").GetComponent<QTEPresenter>();

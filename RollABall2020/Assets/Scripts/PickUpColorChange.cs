@@ -18,13 +18,13 @@ public class PickUpColorChange : MonoBehaviour
 
         switch (m_pickUpDisposition.m_pickUpDisposition)
         {
-            case PickUpDisposition.PickUpDisopsition.SpeedUp:
+            case PickUpDisposition.PublicPickUpDisposition.SpeedUp:
                 mat.color = SpeedUpColor;
                 break;
-            case PickUpDisposition.PickUpDisopsition.SpeedDown:
+            case PickUpDisposition.PublicPickUpDisposition.SpeedDown:
                 mat.color = SpeedDownColor;
                 break;
-            case PickUpDisposition.PickUpDisopsition.QTE:
+            case PickUpDisposition.PublicPickUpDisposition.QTE:
                 mat.color = QTEColor;
                 break;
         }

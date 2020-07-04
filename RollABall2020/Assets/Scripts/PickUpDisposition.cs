@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpDisposition : MonoBehaviour
 {
-    public enum PickUpDisopsition
+    public enum PublicPickUpDisposition
     {
         None = 0,       //何もない
         SpeedUp,        //加速する
@@ -13,14 +13,14 @@ public class PickUpDisposition : MonoBehaviour
         DispositionMax  //性質数のMAX
     }
     
-    public PickUpDisopsition m_pickUpDisposition = PickUpDisopsition.None;
+    public PublicPickUpDisposition m_pickUpDisposition = PublicPickUpDisposition.None;
 
     private void Awake()
     {
         var randomDisposition = 0;
 
-        randomDisposition = Random.Range((int)PickUpDisopsition.None, (int)PickUpDisopsition.DispositionMax);
+        randomDisposition = Random.Range((int)PublicPickUpDisposition.None, (int)PublicPickUpDisposition.DispositionMax);
 
-        m_pickUpDisposition = (PickUpDisopsition)randomDisposition;
+        m_pickUpDisposition = (PublicPickUpDisposition)randomDisposition;
     }
 }
